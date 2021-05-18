@@ -1,0 +1,49 @@
+#slajder{
+    height: 100%;
+  }
+  .auto-slider{
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    padding: 10px 10px 20px;
+    background: none;
+    max-width: 100vw;
+    height: 80vh;
+    margin: 95px 20px;
+    overflow: hidden;
+    z-index: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  @keyframes sliding{
+            0%{left: 0%; }
+            20%{left: -100%;}
+            40%{left: -200%;}
+            60%{left: -300%;}
+        }        
+        
+  @keyframes indicating{
+            from{
+                left: -100%;
+            }
+            to{
+                left: 0;
+            }
+  }  
+        
+        
+  div#slider { overflow: hidden; }
+  div#slider figure img { width: 20%; float: left; }
+  div#slider figure { 
+  background-size: contain;
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 25s sliding ease infinite; 
+  }
